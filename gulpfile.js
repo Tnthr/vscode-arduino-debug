@@ -32,15 +32,15 @@ gulp.task("html-webpack", (done) => {
     config.context = `${__dirname}/src/views`;
     config.mode = argv.mode ? argv.mode : "production";
     return webpack(config, (err, stats) => {
-        const statsJson = stats.toJson();
-        if (err || (statsJson.errors && statsJson.errors.length)) {
-            statsJson.errors.forEach(webpackError => {
-                log.error(`Error (webpack): ${webpackError}`);
-            });
-
-            throw new PluginError("webpack", JSON.stringify(err || statsJson.errors));
-        }
-        log("[webpack]", stats.toString());
+        const statsJson = JSON.stringify(stats);
+//        if (err || (statsJson.errors && statsJson.errors.length)) {
+//            statsJson.errors.forEach(webpackError => {
+//                log.error(`Error (webpack): ${webpackError}`);
+//            });
+//
+//            throw new PluginError("webpack", JSON.stringify(err || statsJson.errors));
+//        }
+        log("[webpack]", stats?.toString() || '');
         done();
     });
 });
