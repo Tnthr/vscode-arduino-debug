@@ -1,6 +1,11 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## Current Development Version
+
+- Did a lot of work on updating dependencies and tweaking small errors so that the extension will now build again.
+- Still need to add back the debugging support that was previously removed in Version 0.5.0.
+
 ## Version 0.6.0
 
 - Release date: March 15, 2023
