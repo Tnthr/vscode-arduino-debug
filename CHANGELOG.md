@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file.
 
 - Did a lot of work on updating dependencies and tweaking small errors so that the extension will now build again.
 - Still need to add back the debugging support that was previously removed in Version 0.5.0.
+- The bundled version of the Arduino CLI was updated to [version 0.34.2](https://github.com/arduino/arduino-cli/releases/tag/0.34.2).
 
 ## Version 0.6.0
 
