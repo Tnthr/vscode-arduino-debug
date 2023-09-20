@@ -1,6 +1,8 @@
-# Visual Studio Code extension for Arduino
+# Visual Studio Code extension for Arduino (the Fork)
 
 [![Gitter](https://img.shields.io/badge/chat-on%20gitter-blue.svg)](https://gitter.im/Microsoft/vscode-arduino)
+
+This is my local fork of the VSCode extension for Arduino. My goal is to update the plethora of outdated dependencies from the main respository and add back support for debugging that was removed in version 0.5.0.
 
 Welcome to the Visual Studio Code extension for **Arduino** <sup>preview</sup> ! The Arduino extension makes it easy to develop, build, and deploy your Arduino sketches in Visual Studio Code, with a rich set of functionalities. These include:
 
