@@ -5,7 +5,8 @@ const impor = require("impor")(__dirname);
 
 import * as fs from "fs";
 import * as path from "path";
-const uuidModule = impor("uuid/v4") as typeof import ("uuid/v4");
+//const uuidModule = impor("uuidv4") as typeof import ("uuid");
+const { v4: uuidModule } = require('uuid');
 import * as vscode from "vscode";
 import * as constants from "./common/constants";
 const arduinoContentProviderModule =
@@ -27,6 +28,10 @@ import { BuildMode } from "./arduino/arduino";
 import * as Logger from "./logger/logger";
 import { SerialMonitor } from "./serialmonitor/serialMonitor";
 const usbDetectorModule = impor("./serialmonitor/usbDetector") as typeof import ("./serialmonitor/usbDetector");
+
+process.on('warning', (warning) => {
+    console.log(warning.stack);
+});
 
 export async function activate(context: vscode.ExtensionContext) {
     Logger.configure(context);

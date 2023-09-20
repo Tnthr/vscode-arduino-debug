@@ -2,7 +2,8 @@
 // Licensed under the MIT license.
 
 import * as path from "path";
-import * as Uuid from "uuid/v4";
+//import * as Uuid from "uuid";
+import { v4 as Uuid } from 'uuid';
 import * as vscode from "vscode";
 import ArduinoActivator from "../arduinoActivator";
 import ArduinoContext from "../arduinoContext";
