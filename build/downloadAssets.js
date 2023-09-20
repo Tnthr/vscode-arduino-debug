@@ -27,13 +27,19 @@ for (const asset in config.assets) {
 
       // Download the asset.
       run([
-        "curl",
+        "curl.exe", // explicit to avoid the Powershell alias
         `https://github.com/arduino/arduino-cli/releases/download/${config.version}/${asset}`,
         "--location",
-        `--output-dir ${directory}`,
+        //`--output-dir ${directory}`, // This doesn't work in older versions of curl from windoze
         `--remote-name`,
         "--silent",
         "--show-error",
+      ].join(" "));
+
+      // Move the asset.
+      run([
+        "move",
+        `${asset} ${directory}`,
       ].join(" "));
 
       // Verify the hash.
